@@ -27,10 +27,10 @@ export async function POST(request) {
   // const timeStamp = Date.now();
 
   const BlogData = {
-    title: `${formData.get("title")}`,
-    name: `${formData.get("name")}`,
-    description: `${formData.get("description")}`,
-    author: `${formData.get("author")}`,
+    title: formData.get("title"),
+    name: formData.get("name"),
+    description: formData.get("description"),
+    author: formData.get("author"),
   };
 
   await BlogModels.create(BlogData);
